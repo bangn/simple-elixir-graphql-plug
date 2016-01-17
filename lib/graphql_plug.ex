@@ -7,7 +7,7 @@ defmodule GraphqlPlug do
     import Supervisor.Spec, warn: false
 
     children = [
-      worker(GraphqlPlug.Router, []),
+      worker(Router, []),
     ]
 
     # See http://elixir-lang.org/docs/stable/elixir/Supervisor.html

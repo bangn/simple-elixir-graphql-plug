@@ -1,4 +1,4 @@
-defmodule GraphqlPlug.Router do
+defmodule Router do
   use Plug.Router
 
   plug :match
