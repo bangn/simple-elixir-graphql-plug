@@ -1,8 +1,19 @@
 defmodule GraphqlPlugTest do
-  use ExUnit.Case
-  doctest GraphqlPlug
+  use ExUnit.Case, async: true
+  use Plug.Test
 
-  test "the truth" do
-    assert 1 + 1 == 2
+  @opts GraphqlPlug.Router.init([])
+
+  test "get '/graphql' returns hello world" do
+    # Create a test connection
+    conn = conn(:get, "/graphql")
+
+    # Invoke the plug
+    conn = GraphqlPlug.Router.call(conn, @opts)
+
+    # Assert the response and status
+    assert conn.state == :sent
+    assert conn.status == 200
+    assert conn.resp_body == "GraphQL response"
   end
 end
