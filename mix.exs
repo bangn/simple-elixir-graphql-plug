@@ -30,7 +30,7 @@ defmodule GraphqlPlug.Mixfile do
   defp deps do
     [
       {:cowboy, "~>1.0.0"},
-      {:plug, "~>1.0"},
+      {:plug, "~>1.1.0"},
       {:graphql, "~> 0.0.9"}
     ]
   end
