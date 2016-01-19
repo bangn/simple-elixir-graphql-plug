@@ -1,20 +1,24 @@
 # GraphqlPlug
 
-**TODO: Add description**
+A simple Facebook's GraphQL server using GraphQL-Elixir and Plug
 
 ## Installation
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed as:
+  1. Clone this repo
 
-  1. Add graphql_plug to your list of dependencies in `mix.exs`:
+  2. Run `mix deps.get`
 
-        def deps do
-          [{:graphql_plug, "~> 0.0.1"}]
-        end
 
-  2. Ensure graphql_plug is started before your application:
+## Usage
 
-        def application do
-          [applications: [:graphql_plug]]
-        end
+  1. Run `iex -S mix`
+
+  2. `curl -v -L "http://localhost:4000/graphql?query={greeting}"`
+
+  3. You should get `{"data":{"greeting":"Hello, world!"}}` json response
+
+## Credit
+
+The schema is get from https://github.com/joshprice/plug_graphql
+
 
