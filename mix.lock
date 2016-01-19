@@ -2,4 +2,5 @@
   "cowlib": {:hex, :cowlib, "1.0.2"},
   "graphql": {:hex, :graphql, "0.0.9"},
   "plug": {:hex, :plug, "1.1.0"},
+  "poison": {:hex, :poison, "1.5.2"},
   "ranch": {:hex, :ranch, "1.2.0"}}
